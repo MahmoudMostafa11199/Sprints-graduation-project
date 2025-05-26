@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!----------- Icons ------------>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+
+    <title>E-Commerce - Register</title>
+
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="../assets/css/normalize.css" />
+    <link rel="stylesheet" href="./auth.css" />
+
+    <!-- JavaScript Files -->
+    <script src="../assets/js/layout-loader.js" defer></script>
+    <script src="./auth.js" defer></script>
+  </head>
+  <body>
+    <main>
+      <section class="register-section">
+        <div class="container">
+          <form action="" name="register" class="form form-register">
+            <div class="heading-form">
+              <ion-icon name="person-circle" class="icon-login"></ion-icon>
+              <h2 class="heading-secondary">Create account!</h2>
+            </div>
+
+            <div class="form-row">
+              <label for="name" class="lbl">Name</label>
+              <input
+                type="text"
+                name="name"
+                id="name"
+                class="input-field"
+                required
+              />
+              <ion-icon name="person" class="icon-input"></ion-icon>
+            </div>
+
+            <div class="form-row">
+              <label for="email" class="lbl">Email</label>
+              <input
+                type="email"
+                name="email"
+                id="email"
+                class="input-field"
+                required
+              />
+              <ion-icon name="mail" class="icon-input"></ion-icon>
+              <p class="check check-email hidden">Invalid email</p>
+            </div>
+
+            <div class="form-row">
+              <label for="username" class="lbl">Username</label>
+              <input
+                type="text"
+                name="username"
+                id="username"
+                class="input-field"
+                required
+              />
+              <ion-icon name="person" class="icon-input"></ion-icon>
+              <p class="check check-username hidden">
+                Username ... is not available
+              </p>
+            </div>
+
+            <div class="form-row">
+              <label for="password" class="lbl">Password</label>
+              <input
+                type="password"
+                name="password"
+                id="password"
+                class="input-field"
+                required
+              />
+              <ion-icon name="lock-closed" class="icon-input"></ion-icon>
+            </div>
+
+            <button type="submit" class="btn btn__submit btn__register">
+              Create&nbsp;
+              <ion-icon name="arrow-forward-sharp"></ion-icon>
+            </button>
+
+            <hr />
+            <p class="switch-method">
+              Already have an account?
+              <a href="./auth.html" class="switch-method__link">Login</a>
+            </p>
+          </form>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
