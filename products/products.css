@@ -1,0 +1,51 @@
+section {
+  padding-block: 4.6rem;
+}
+
+.heading-secondary {
+  margin-bottom: 4rem;
+}
+
+.products {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 1rem;
+  row-gap: 2rem;
+}
+
+.product {
+  display: flex;
+  align-items: center;
+  column-gap: 1.6rem;
+  height: auto;
+  border: 2px solid #ddd;
+  border-radius: 6px;
+  padding: 2rem 2.8rem;
+  background-color: #fff;
+  color: #000;
+
+  flex: 1 0 45%;
+  position: relative;
+}
+
+.product__img {
+  width: 12rem;
+  height: auto;
+}
+
+.product__title {
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.product__category {
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: #4a9d23;
+}
+
+.product__price {
+  font-size: 1.4rem;
+  color: #f00;
+  margin-bottom: 1.4rem;
+}
