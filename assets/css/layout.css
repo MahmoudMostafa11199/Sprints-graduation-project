@@ -42,6 +42,52 @@
   margin-bottom: 0 !important;
 }
 
+.user {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  color: var(--primary-color);
+  cursor: pointer;
+  position: relative;
+}
+
+.icon-user {
+  font-size: 3rem;
+}
+
+.btn-logout {
+  position: absolute;
+  top: 4rem;
+  width: 100%;
+  padding: 1rem !important;
+  background-color: #fff !important;
+  color: var(--primary-color) !important;
+  visibility: hidden;
+}
+
+.btn-logout::before {
+  content: '';
+  position: absolute;
+  top: -1.9rem;
+  left: 50%;
+  transform: translateX(-50%);
+  border: 10px solid;
+  border-color: transparent transparent #fff transparent;
+}
+
+.user:hover .btn-logout {
+  visibility: visible;
+}
+
+.sticky .header {
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  background-color: #f1f1f1;
+  opacity: 0.98;
+}
+
 .footer {
   background-color: #4e4747;
   color: #eee;

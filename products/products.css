@@ -49,3 +49,12 @@ section {
   color: #f00;
   margin-bottom: 1.4rem;
 }
+
+.product__description {
+  margin-bottom: 2rem;
+}
+
+.btn__add-to-cart {
+  padding: 0.6rem 2.4rem;
+  background-color: #777;
+}

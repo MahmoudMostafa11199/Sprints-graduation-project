@@ -39,7 +39,12 @@ btnLogin?.addEventListener('click', (e) => {
     invalidLoginEl.classList.remove('hidden');
   } else {
     invalidLoginEl.classList.add('hidden');
+
+    // localStorage.setItem('login', JSON.stringify(userData));
+    document.cookie = `login=${userData.name}; max-age=${60 * 60 * 24}; path=/`;
     formEl.reset();
+
+    sessionStorage.setItem('toast', `Welcome ${userData.name}`);
     window.location.href = '../products/products.html';
   }
 });

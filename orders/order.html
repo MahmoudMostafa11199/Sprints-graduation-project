@@ -15,7 +15,7 @@
       src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
     ></script>
 
-    <title>E-Commerce | Products</title>
+    <title>E-Commerce | Orders</title>
 
     <!------------ CSS Files ------------>
     <link
@@ -24,23 +24,24 @@
       href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css"
     />
     <link rel="stylesheet" href="../assets/css/normalize.css" />
-    <link rel="stylesheet" href="./products.css" />
+    <link rel="stylesheet" href="./order.css" />
 
     <!------------ JavaScript Files ------------>
+    <script src="../assets/js/authGuard.js" defer></script>
     <script
       type="text/javascript"
       src="https://cdn.jsdelivr.net/npm/toastify-js"
     ></script>
-    <script src="../assets/js/authGuard.js" defer></script>
     <script src="../assets/js/layout-loader.js" defer></script>
-    <script src="./products.js" defer></script>
+    <script src="./order.js" defer></script>
   </head>
+
   <body>
     <main>
-      <section class="products-section">
+      <section class="orders-section">
         <div class="container">
-          <h2 class="heading-secondary">All Products</h2>
-          <div class="products"></div>
+          <h2 class="heading-secondary">Orders</h2>
+          <div class="orders"></div>
         </div>
       </section>
     </main>
