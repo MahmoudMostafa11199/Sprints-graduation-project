@@ -52,6 +52,10 @@ section {
 
 .product__description {
   margin-bottom: 2rem;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
 
 .btn__add-to-cart {
