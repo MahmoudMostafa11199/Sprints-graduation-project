@@ -1,0 +1,39 @@
+/* 900px == 56.25em */
+@media screen and (max-width: 56.25em) {
+  html {
+    font-size: 50%;
+  }
+}
+
+/* 750px == 46.875em */
+@media screen and (max-width: 46.875em) {
+  .products {
+    flex-direction: column;
+  }
+  .product {
+    gap: 2.4rem;
+  }
+}
+
+/* 448px == 28em */
+@media screen and (max-width: 28em) {
+  .header {
+    flex-wrap: wrap;
+    row-gap: 2.4rem;
+  }
+
+  .main-nav {
+    width: 100%;
+  }
+
+  .user,
+  .logo {
+    order: -1;
+  }
+
+  .product,
+  .order__item {
+    flex-direction: column;
+    gap: 2.4rem;
+  }
+}
