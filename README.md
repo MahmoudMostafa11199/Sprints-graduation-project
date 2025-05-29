@@ -1,3 +1,3 @@
 # Graduation Project
 
-[Live Demo](https://e-commerce-store.vercel.app/)
+[Live Demo](https://e-commerce-store-sprints.vercel.app/)
