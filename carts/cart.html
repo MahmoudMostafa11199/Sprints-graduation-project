@@ -23,7 +23,7 @@
       src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
     ></script>
 
-    <title>E-Commerce | Products</title>
+    <title>E-Commerce | Carts</title>
 
     <!------------ CSS Files ------------>
     <link
@@ -32,7 +32,7 @@
       href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css"
     />
     <link rel="stylesheet" href="../assets/css/all.min.css" />
-    <link rel="stylesheet" href="./products.css" />
+    <link rel="stylesheet" href="./cart.css" />
     <link rel="stylesheet" href="../assets/css/query.css" />
 
     <!------------ JavaScript Files ------------>
@@ -42,14 +42,43 @@
     ></script>
     <script src="../assets/js/authGuard.js" defer></script>
     <script src="../assets/js/layout-loader.js" defer></script>
-    <script src="./products.js" defer></script>
+    <script src="./cart.js" defer></script>
   </head>
+
   <body>
     <main>
-      <section class="products-section">
+      <section class="carts-section">
         <div class="container">
-          <h2 class="heading-secondary">All Products</h2>
-          <div class="products"></div>
+          <h2 class="heading-secondary">Carts</h2>
+
+          <div class="carts"></div>
+
+          <div class="cart-summary">
+            <h3 class="heading-tertiary cart-summary__heading">Cart Total</h3>
+            <div class="cart-summary__row">
+              <p class="cart-summary__label">Subtotal:</p>
+              <p class="cart-summary__value">
+                $<span class="cart-summary__subtotal">00.00</span>
+              </p>
+            </div>
+            <hr />
+            <div class="cart-summary__row">
+              <p class="cart-summary__label">Shipping:</p>
+              <p class="cart-summary__value">
+                $<span class="cart-summary__shipping">5.00</span>
+              </p>
+            </div>
+            <hr />
+            <div class="cart-summary__row">
+              <p class="cart-summary__label">Total:</p>
+              <p class="cart-summary__value">
+                $<span class="cart-summary__total">00.00</span>
+              </p>
+            </div>
+            <div class="cart-summary__row">
+              <button class="btn cart-summary__btn">Place Order</button>
+            </div>
+          </div>
         </div>
       </section>
     </main>

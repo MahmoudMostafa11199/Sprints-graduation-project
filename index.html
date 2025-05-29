@@ -5,12 +5,47 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>E-Commerce</title>
+    <title>E-Commerce | Home</title>
+
+    <!----------- Icon Page ------------>
+    <link rel="icon" href="./assets/imgs/logo/favicon.ico" />
+    <link
+      rel="apple-touch-icon"
+      href="./assets/imgs/logo/apple-touch-icon.png"
+    />
+    <link rel="manifest" href="./assets/imgs/logo/site.webmanifest" />
+
+    <!----------- Icons ------------>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+
+    <!------------ CSS Files ------------>
+    <link rel="stylesheet" href="../assets/css/all.min.css" />
+    <link rel="stylesheet" href="../assets/css/home.css" />
+    <link rel="stylesheet" href="../assets/css/query.css" />
+
+    <!------------ JavaScript Files ------------>
+    <script src="../assets/js/authGuard.js" defer></script>
+    <script src="../assets/js/layout-loader.js" defer></script>
   </head>
 
   <body>
-    <script defer>
-      window.location.href = './auth/auth.html';
-    </script>
+    <main>
+      <section class="hero-section">
+        <div class="container">
+          <h1 class="heading-primary">Your Shopping Experience Starts Here</h1>
+          <p class="hero__text">
+            Discover quality products. Track your orders. Shop with confidence.
+          </p>
+          <a href="../products/products.html" class="btn hero__btn">Shop Now</a>
+        </div>
+      </section>
+    </main>
   </body>
 </html>

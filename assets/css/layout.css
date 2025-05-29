@@ -46,6 +46,7 @@
   display: flex;
   align-items: center;
   gap: 0.4rem;
+  font-weight: 500;
   color: var(--primary-color);
   cursor: pointer;
   position: relative;
