@@ -82,13 +82,6 @@ const showNotification = (message) => {
 /////////////////////////////////////////////////////
 // Init Function
 const init = async () => {
-  const toastMessage = sessionStorage.getItem('toast');
-
-  if (toastMessage) {
-    showNotification(toastMessage);
-    sessionStorage.removeItem('toast');
-  }
-
   let products = JSON.parse(localStorage.getItem('products'));
 
   if (!products || !products.length) {
