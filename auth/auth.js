@@ -27,11 +27,11 @@ btnLogin?.addEventListener('click', (e) => {
 
   // Check if login credentials are correct
   if (!userData || usernameEl.value !== userData.username) {
-    invalidEl.textContent = 'User not found';
-    invalidEl.classList.remove('hidden');
+    invalidLoginEl.textContent = 'User not found';
+    invalidLoginEl.classList.remove('hidden');
   } else if (passwordEl.value !== userData.password) {
-    invalidEl.textContent = 'Incorrect password';
-    invalidEl.classList.remove('hidden');
+    invalidLoginEl.textContent = 'Incorrect password';
+    invalidLoginEl.classList.remove('hidden');
   } else {
     invalidLoginEl.classList.add('hidden');
 
