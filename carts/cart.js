@@ -124,7 +124,7 @@ const deleteCart = (id) => {
 
 ///////////////////////////////////////////////////////
 // Place Order Functionlaity
-const placedOrder = (e) => {
+const placedOrder = () => {
   if (!cart.length) return;
 
   const { totalPriceAfterShipping } = calcCartTotalPrice();
@@ -151,6 +151,10 @@ const placedOrder = (e) => {
   init();
 
   showNotification('Order placed successfully');
+
+  setTimeout(() => {
+    window.location.href = '../orders/order.html';
+  }, 2000);
 };
 
 ///////////////////////////////////////////////////////
@@ -207,16 +211,17 @@ const showNotification = (message) => {
 // Initialize: render all carts or show (no carts) message
 const init = () => {
   if (!cart.length) {
+    btnPlaceOrder.disabled = true;
     cartContainer.innerHTML = `
-      <div class="no-cart">
-        <p class="no-cart__text">No carts yet. Go to Products and add some items to your cart!</p>
-        <a href="../products/products.html" class="btn no-cart__btn">Go to Products</a>
-      </div>
-      `;
-    cartSummaryContainer.innerHTML = '';
+    <div class="no-cart">
+      <p class="no-cart__text">No carts yet. Go to Products and add some items to your cart!</p>
+      <a href="../products/products.html" class="btn no-cart__btn">Go to Products</a>
+    </div>
+    `;
     return;
   }
 
+  btnPlaceOrder.disabled = false;
   cartContainer.innerHTML = '';
   cart.forEach(renderCart);
   updateUITotalPrice();
