@@ -146,7 +146,8 @@ const placedOrder = (e) => {
   orders.push(newOrder);
 
   saveToLocalStorage('orders', orders);
-  // localStorage.removeItem('cart');
+  cart.splice(0, cart.length);
+  localStorage.removeItem('cart');
   init();
 
   showNotification('Order placed successfully');
@@ -186,6 +187,23 @@ const saveToLocalStorage = (item, data) => {
 };
 
 ///////////////////////////////////////////////////////
+// Show notification
+const showNotification = (message) => {
+  Toastify({
+    text: message,
+    duration: 3000,
+    close: true,
+    gravity: 'top',
+    position: 'center',
+    stopOnFocus: true,
+    style: {
+      background:
+        'linear-gradient(to right, var(--primary-color),var(--primary-color-light))',
+    },
+  }).showToast();
+};
+
+///////////////////////////////////////////////////////
 // Initialize: render all carts or show (no carts) message
 const init = () => {
   if (!cart.length) {
@@ -205,20 +223,3 @@ const init = () => {
 };
 
 init();
-
-///////////////////////////////////////////////////////
-// Show notification
-const showNotification = (message) => {
-  Toastify({
-    text: message,
-    duration: 3000,
-    close: true,
-    gravity: 'top',
-    position: 'center',
-    stopOnFocus: true,
-    style: {
-      background:
-        'linear-gradient(to right, var(--primary-color),var(--primary-color-light))',
-    },
-  }).showToast();
-};

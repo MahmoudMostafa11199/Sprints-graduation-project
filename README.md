@@ -124,3 +124,16 @@ Check out the Video version here: [View Video on Google Drive](https://drive.goo
 5. **Session Handling:**
    - Login status is checked using cookies on every page.
    - If no valid login cookie is found, the user is redirected to the login page.
+
+## Upcoming Features
+
+The project is still evolving, and the following enhancements are currently in progress and will be added soon:
+
+- Product details button on the Orders page for more in-depth information about each order item.
+- Admin (Supervisor) features allowing:
+  - Adding new products
+  - Editing existing products
+  - Deleting products
+  - Viewing sold products statistics and reports
+
+These features will be deployed as soon as development is complete.

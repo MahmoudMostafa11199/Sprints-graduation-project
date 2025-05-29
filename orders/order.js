@@ -31,7 +31,7 @@ const renderOrder = (order, i) => {
               }</p>
             <p class="order-item__price">
               <span class=""order-item__label">Total price: </span>
-              <span class="price">$${order.totalPrice}</span>
+              <span class="price">$${order.totalPrice.toFixed(2)}</span>
             </p>
             <p class="order-item__quantity">
             <span class=""order-item__label">Order status: </span>${

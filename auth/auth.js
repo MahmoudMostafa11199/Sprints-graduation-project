@@ -1,14 +1,11 @@
-// Login form elements
+// Form Elements
 const formEl = document.querySelector('form');
-const usernameLoginEl = document.querySelector('.form-login #username');
-const passwordLoginEl = document.querySelector('.form-login #password');
-const invalidLoginEl = document.querySelector('.invalid-login');
+const usernameEl = document.getElementById('username');
+const passwordEl = document.getElementById('password');
+const nameEl = document.getElementById('name');
+const emailEl = document.getElementById('email');
 
-// Registration form elements
-const nameRegisterEl = document.querySelector('.form-register #name');
-const emailRegisterEl = document.querySelector('.form-register #email');
-const usernameRegisterEl = document.querySelector('.form-register #username');
-const passwordRegisterEl = document.querySelector('.form-register #password');
+const invalidLoginEl = document.querySelector('.invalid-login');
 const checkEmailEl = document.querySelector('.check-email');
 const checkUsernameEl = document.querySelector('.check-username');
 
@@ -24,28 +21,25 @@ const users = JSON.parse(localStorage.getItem('users')) || [];
 btnLogin?.addEventListener('click', (e) => {
   e.preventDefault();
 
-  if (!usernameLoginEl.value || !passwordLoginEl.value) return;
+  if (!usernameEl.value || !passwordEl.value) return;
 
-  const userData = users.find(
-    (user) => user.username === usernameLoginEl.value
-  );
+  const userData = users.find((user) => user.username === usernameEl.value);
 
   // Check if login credentials are correct
-  if (!userData || usernameLoginEl.value !== userData.username) {
-    invalidLoginEl.textContent = 'User not found';
-    invalidLoginEl.classList.remove('hidden');
-  } else if (passwordLoginEl.value !== userData.password) {
-    invalidLoginEl.textContent = 'Incorrect password';
-    invalidLoginEl.classList.remove('hidden');
+  if (!userData || usernameEl.value !== userData.username) {
+    invalidEl.textContent = 'User not found';
+    invalidEl.classList.remove('hidden');
+  } else if (passwordEl.value !== userData.password) {
+    invalidEl.textContent = 'Incorrect password';
+    invalidEl.classList.remove('hidden');
   } else {
     invalidLoginEl.classList.add('hidden');
 
-    // localStorage.setItem('login', JSON.stringify(userData));
     document.cookie = `login=${userData.name}; max-age=${60 * 60 * 24}; path=/`;
     formEl.reset();
 
     sessionStorage.setItem('toast', `Welcome ${userData.name}`);
-    window.location.href = '../products/products.html';
+    window.location.href = '../index.html';
   }
 });
 
@@ -55,28 +49,23 @@ btnRegister?.addEventListener('click', (e) => {
   e.preventDefault();
 
   // Check if any registration field is empty
-  if (
-    !nameRegisterEl.value ||
-    !emailRegisterEl.value ||
-    !usernameRegisterEl.value ||
-    !passwordRegisterEl.value
-  )
+  if (!nameEl.value || !emailEl.value || !usernameEl.value || !passwordEl.value)
     return;
 
   const user = {
-    name: nameRegisterEl.value,
-    email: emailRegisterEl.value,
-    username: usernameRegisterEl.value,
-    password: passwordRegisterEl.value,
+    name: nameEl.value,
+    email: emailEl.value,
+    username: usernameEl.value,
+    password: passwordEl.value,
   };
 
   // Check email is valid
-  if (!checkEmail(emailRegisterEl.value)) {
+  if (!checkEmail(emailEl.value)) {
     checkEmailEl.classList.remove('hidden');
 
     // Check username is already exists
-  } else if (checkUsername(usernameRegisterEl.value)) {
-    checkUsernameEl.textContent = `Username ${usernameRegisterEl.value} is not available`;
+  } else if (checkUsername(usernameEl.value)) {
+    checkUsernameEl.textContent = `Username ${usernameEl.value} is not available`;
     checkUsernameEl.classList.remove('hidden');
     checkEmailEl.classList.add('hidden');
 
@@ -104,6 +93,5 @@ const checkEmail = (email) => {
 // Function to check if username is already taken
 const checkUsername = (username) => {
   const index = users.findIndex((user) => user.username === username);
-  console.log(index);
   return index !== -1 ? true : false;
 };

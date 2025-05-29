@@ -1,10 +1,10 @@
 ///////////////////////////////////////////////////////////
 // Upload Header and Footer (Display)
 const uploadLayout = async () => {
-  const resHeader = await fetch('../components/header.html');
+  const resHeader = await fetch('../layout/header.html');
   const headerData = await resHeader.text();
 
-  const resFooter = await fetch('../components/footer.html');
+  const resFooter = await fetch('../layout/footer.html');
   const footerData = await resFooter.text();
 
   document.body.insertAdjacentHTML('afterbegin', headerData);
@@ -38,9 +38,8 @@ const displayUserName = () => {
 // Logout
 const logout = () => {
   document.querySelector('.btn-logout').addEventListener('click', () => {
-    // localStorage.removeItem('login');
     document.cookie = 'login=; max-age=0; path=/';
-    window.location.href = '../../index.html';
+    window.location.href = '../../auth/auth.html';
   });
 };
 
